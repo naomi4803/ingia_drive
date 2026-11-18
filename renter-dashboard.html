@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View sample upcoming trips, rental history, and rewards on the Ingia Drive renter dashboard.">
+  <title>Renter Dashboard | Ingia Drive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ingia Drive home">
+        <span class="brand-mark" aria-hidden="true">I</span>
+        ingia drive
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <details class="nav-dropdown" id="dashboard-menu">
+          <summary>Dashboard</summary>
+          <div class="nav-dropdown-menu">
+            <a href="renter-dashboard.html">Renter dashboard</a>
+            <a href="manager-dashboard.html">Manager dashboard</a>
+          </div>
+        </details>
+        <a href="index.html#fleet">Browse cars</a>
+        <a href="index.html#services">Services</a>
+      </nav>
+      <a class="button" href="index.html#fleet">Find a car <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard dashboard-page">
+      <div class="container dashboard-layout">
+        <button class="dashboard-menu-backdrop" type="button" aria-label="Close dashboard menu" hidden></button>
+        <aside class="dashboard-sidebar" id="renter-menu" aria-label="Renter dashboard menu" hidden>
+          <div class="dashboard-sidebar-header">
+            <p class="sidebar-title">Choose dashboard</p>
+            <button class="dashboard-menu-close" type="button">Close</button>
+          </div>
+          <nav class="dashboard-sidebar-links" aria-label="Dashboard types">
+            <a class="is-current" href="renter-dashboard.html" aria-current="page">Renter dashboard</a>
+            <a href="manager-dashboard.html">Manager dashboard</a>
+          </nav>
+          <p class="sidebar-title">Renter menu</p>
+          <nav class="dashboard-sidebar-links" aria-label="Renter dashboard sections">
+            <a class="is-current" href="#overview" aria-current="page">Overview</a>
+            <a href="#upcoming">Upcoming trip</a>
+            <a href="#history">Rental history</a>
+            <a href="index.html#fleet">Browse cars</a>
+          </nav>
+        </aside>
+        <div class="dashboard-content" id="overview">
+        <button class="dashboard-menu-toggle" type="button" aria-controls="renter-menu" aria-expanded="false">
+          <span aria-hidden="true">☰</span> Open menu
+        </button>
+        <div class="dashboard-heading">
+          <div>
+            <span class="eyebrow">Renter area</span>
+            <h1>Your rental dashboard</h1>
+            <p>A quick look at your trips, rental history, and rewards.</p>
+          </div>
+          <span class="demo-badge">Sample account</span>
+        </div>
+
+        <div class="dashboard-welcome">
+          <div>
+            <h3>Welcome back, Alex</h3>
+            <p>This renter dashboard is a preview using sample information.</p>
+          </div>
+          <a class="button" href="index.html#fleet">Book a car <span aria-hidden="true">→</span></a>
+        </div>
+
+        <div class="dashboard-stats renter-stats">
+          <article class="stat-card"><span>Next pick-up</span><strong>Nov 28</strong><small>Downtown · 10:00 AM</small></article>
+          <article class="stat-card"><span>Completed rentals</span><strong>8</strong><small>Your rental history</small></article>
+          <article class="stat-card"><span>Drive points</span><strong>1,240</strong><small>Available rewards points</small></article>
+        </div>
+
+        <div class="dashboard-columns">
+          <article class="dashboard-card upcoming-card" id="upcoming">
+            <div class="dashboard-card-heading"><h3>Upcoming trip</h3><span class="status-pill">Confirmed</span></div>
+            <div class="trip-summary">
+              <img src="prado.jpg" alt="Toyota Land Cruiser Prado" loading="lazy">
+              <div>
+                <h3>Toyota Land Cruiser Prado</h3>
+                <p>Nov 28 – Dec 2, 2026 · 4 days</p>
+                <p>Pick-up: Downtown location</p>
+              </div>
+            </div>
+          </article>
+          <article class="dashboard-card">
+            <h3>Quick links</h3>
+            <div class="dashboard-links">
+              <a href="index.html#fleet">Browse available cars <span aria-hidden="true">→</span></a>
+              <a href="index.html#services">Rental services <span aria-hidden="true">→</span></a>
+              <a href="index.html#about">About Ingia Drive <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+
+        <article class="dashboard-card reservations-card" id="history">
+          <div class="dashboard-card-heading">
+            <h3>Recent rentals</h3>
+            <span class="sample-note">Sample history</span>
+          </div>
+          <div class="table-scroll">
+            <table class="reservation-table">
+              <thead><tr><th>Vehicle</th><th>Rental dates</th><th>Location</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Ferrari Convertible</td><td>Nov 5–7, 2026</td><td>Airport</td><td><span class="status-pill">Completed</span></td></tr>
+                <tr><td>Hyundai Sedan</td><td>Oct 12–14, 2026</td><td>Downtown</td><td><span class="status-pill">Completed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">I</span>ingia drive</a>
+      <span>Demo dashboard · Sample data only</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="index.html#dashboard-menu">Dashboard menu</a></div>
+    </div>
+  </footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>

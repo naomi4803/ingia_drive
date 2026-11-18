@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View sample fleet, reservations, and revenue metrics on the Ingia Drive manager dashboard.">
+  <title>Rental Manager Dashboard | Ingia Drive</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Ingia Drive home">
+        <span class="brand-mark" aria-hidden="true">I</span>
+        ingia drive
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <details class="nav-dropdown" id="dashboard-menu">
+          <summary>Dashboard</summary>
+          <div class="nav-dropdown-menu">
+            <a href="renter-dashboard.html">Renter dashboard</a>
+            <a href="manager-dashboard.html">Manager dashboard</a>
+          </div>
+        </details>
+        <a href="index.html#fleet">Browse cars</a>
+        <a href="index.html#services">Services</a>
+      </nav>
+      <a class="button" href="index.html#fleet">View fleet <span aria-hidden="true">→</span></a>
+    </div>
+  </header>
+
+  <main>
+    <section class="dashboard dashboard-page">
+      <div class="container dashboard-layout">
+        <button class="dashboard-menu-backdrop" type="button" aria-label="Close dashboard menu" hidden></button>
+        <aside class="dashboard-sidebar" id="manager-menu" aria-label="Rental manager dashboard menu" hidden>
+          <div class="dashboard-sidebar-header">
+            <p class="sidebar-title">Choose dashboard</p>
+            <button class="dashboard-menu-close" type="button">Close</button>
+          </div>
+          <nav class="dashboard-sidebar-links" aria-label="Dashboard types">
+            <a href="renter-dashboard.html">Renter dashboard</a>
+            <a class="is-current" href="manager-dashboard.html" aria-current="page">Manager dashboard</a>
+          </nav>
+          <p class="sidebar-title">Manager menu</p>
+          <nav class="dashboard-sidebar-links" aria-label="Manager dashboard sections">
+            <a class="is-current" href="#overview" aria-current="page">Overview</a>
+            <a href="#fleet-management">Fleet</a>
+            <a href="#reservations">Reservations</a>
+            <a href="#revenue-overview">Revenue</a>
+            <a href="index.html#fleet">Browse cars</a>
+          </nav>
+        </aside>
+        <div class="dashboard-content" id="overview">
+        <button class="dashboard-menu-toggle" type="button" aria-controls="manager-menu" aria-expanded="false">
+          <span aria-hidden="true">☰</span> Open menu
+        </button>
+        <div class="dashboard-heading">
+          <div>
+            <span class="eyebrow">Business area</span>
+            <h1>Rental manager dashboard</h1>
+            <p>Review fleet availability and recent reservations at a glance.</p>
+          </div>
+          <span class="demo-badge">Sample account</span>
+        </div>
+
+        <div class="dashboard-welcome">
+          <div>
+            <h3>Rental operations</h3>
+            <p>Preview only. This page is not connected to real customer or booking records.</p>
+          </div>
+          <span class="status-pill">Today · Nov 18, 2026</span>
+        </div>
+
+        <div class="dashboard-stats manager-stats">
+          <article class="stat-card"><span>Cars in fleet</span><strong>6</strong><small>Across all vehicle types</small></article>
+          <article class="stat-card"><span>Available today</span><strong>4</strong><small>Ready for booking</small></article>
+          <article class="stat-card"><span>Active bookings</span><strong>12</strong><small>Upcoming reservations</small></article>
+          <article class="stat-card"><span>Monthly revenue</span><strong>$8,420</strong><small>Sample month-to-date</small></article>
+        </div>
+
+        <article class="dashboard-card reservations-card" id="reservations">
+          <div class="dashboard-card-heading">
+            <h3>Recent reservations</h3>
+            <span class="sample-note">Sample bookings</span>
+          </div>
+          <div class="table-scroll">
+            <table class="reservation-table">
+              <thead><tr><th>Customer</th><th>Vehicle</th><th>Pick-up</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Alex Morgan</td><td>Toyota Land Cruiser Prado</td><td>Nov 28, 2026</td><td><span class="status-pill">Confirmed</span></td></tr>
+                <tr><td>Jamie Lee</td><td>Mercedes-Benz GLE</td><td>Nov 29, 2026</td><td><span class="status-pill status-pending">Pending</span></td></tr>
+                <tr><td>Mia Chen</td><td>Ferrari Convertible</td><td>Dec 1, 2026</td><td><span class="status-pill">Confirmed</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="dashboard-card reservations-card" id="fleet-management">
+          <div class="dashboard-card-heading">
+            <h3>Fleet availability</h3>
+            <span class="sample-note">6 sample vehicles</span>
+          </div>
+          <div class="table-scroll">
+            <table class="reservation-table">
+              <thead><tr><th>Vehicle</th><th>Type</th><th>Rate / day</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>Audi Sports Car</td><td>Sports</td><td>$68</td><td><span class="status-pill">Available</span></td></tr>
+                <tr><td>Ferrari Convertible</td><td>Convertible</td><td>$82</td><td><span class="status-pill status-booked">Booked</span></td></tr>
+                <tr><td>Mercedes-Benz GLE</td><td>SUV</td><td>$105</td><td><span class="status-pill status-booked">Booked</span></td></tr>
+                <tr><td>Hyundai Sedan</td><td>Sedan</td><td>$62</td><td><span class="status-pill">Available</span></td></tr>
+                <tr><td>Mazda Crossover</td><td>Crossover</td><td>$74</td><td><span class="status-pill">Available</span></td></tr>
+                <tr><td>Toyota Land Cruiser Prado</td><td>SUV</td><td>$96</td><td><span class="status-pill">Available</span></td></tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+
+        <article class="dashboard-card reservations-card" id="revenue-overview">
+          <div class="dashboard-card-heading">
+            <h3>Revenue overview</h3>
+            <span class="sample-note">Sample month-to-date</span>
+          </div>
+          <div class="dashboard-stats revenue-stats">
+            <article class="stat-card"><span>Total revenue</span><strong>$8,420</strong><small>Current month</small></article>
+            <article class="stat-card"><span>Rental charges</span><strong>$7,620</strong><small>Vehicle rentals</small></article>
+            <article class="stat-card"><span>Extras</span><strong>$800</strong><small>Optional add-ons</small></article>
+          </div>
+        </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-row">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true">I</span>ingia drive</a>
+      <span>Demo dashboard · Sample data only</span>
+      <div class="footer-links"><a href="index.html">Home</a><a href="index.html#dashboard-menu">Dashboard menu</a></div>
+    </div>
+  </footer>
+  <script src="dashboard.js"></script>
+</body>
+</html>
